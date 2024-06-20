@@ -1,0 +1,37 @@
+steam price api:
+    https://buff.163.com/api/market/goods/price_history
+        ?game=csgo&
+        goods_id=956507&
+        currency=CNY&
+        days=30&
+        buff_price_type=2&
+        with_sell_num=false&
+        _=1718470113413
+          1718470355212
+
+buff price api:
+    https://buff.163.com/api/market/goods/price_history/buff?
+    game=csgo&
+    goods_id=956507&
+    currency=CNY&
+    days=30&
+    buff_price_type=2&
+    with_sell_num=false&
+    _=1718470113417
+      1718470355217
+      https://buff.163.com/api/market/goods/price_history/buff?game=csgo&
+      goods_id=956507&
+      currency=CNY&
+      days=30&
+      buff_price_type=2&
+      with_sell_num=false&
+      _=1718470496626
+
+
+to do list:
+    -实现传参进入spider，
+    -将overall爬虫的价格写入data/history/xxx.csv
+    -实现自动化爬取历史价格，达到效果：
+        输入scrapy crawl buffhistoryspider -a weapon_ak47
+
+    -gethistory脚本有问题
