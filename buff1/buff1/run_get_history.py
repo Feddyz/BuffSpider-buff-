@@ -18,7 +18,7 @@ def run_spider(category):
 
 if __name__ == '__main__':
     # 读取 CSV 文件
-    intended_category = read_csv()
+    intended_category = pd.read_csv('data/gethistory.csv', names=['internal_names'], header=None)
 
     # 提取类别列表
     cat_list = intended_category['internal_names']

@@ -42,10 +42,11 @@ class buffhistory(scrapy.Spider):
 
         intended_id = pd.read_csv('data/id_list/'+self.intname+'.csv',header = None,names=['id'])
         self.id_list = intended_id['id']
+        # print(self.intname)
         datalen = len(catlist)
 
         x = 1
-        myth = 1718554632904
+        myth = 1718654632904
 
 
         self.params = {'game': 'csgo',
@@ -106,7 +107,8 @@ class buffhistory(scrapy.Spider):
 
         filename = "data/buffpricehistory/"+self.intname+'.csv'
         id_meta = response.request.meta['id']
-        print(id_meta)
+        print(self.intname+':'+str(id_meta))
+
         with open(filename,'a',encoding='utf-8') as file:
 
             for record in data['data']['price_history']:#对每件皮肤
